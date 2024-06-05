@@ -1,0 +1,65 @@
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  ParseIntPipe,
+  Post,
+  Put,
+  UseGuards,
+} from '@nestjs/common';
+import { CreateOrderDto } from '../dto/create-order.dto';
+import { CreateOrderService } from '../use-case/create-order.service';
+import { GetAllOrdersService } from '../use-case/get-all-orders.service';
+import { PayOrderService } from '../use-case/pay-order.service';
+import { CancelOrderService } from '../use-case/cancel-order.service';
+import { UpdateInvoiceAddressOrderService } from '../use-case/update-order-invoice-address.service';
+import { UpdateShippingAddressOrderService } from '../use-case/update-order-shipping-address.service';
+import { UpdateOrderShippingAddressDto } from '../dto/update-order-shipping-address.dto';
+import { UpdateOrderInvoiceAddressDto } from '../dto/update-order-invoice-address.dto';
+import { AuthGuard } from 'src/auth/auth.guard';
+
+@Controller('orders')
+export class OrderController {
+  constructor(
+    private readonly createOrderService: CreateOrderService,
+    private readonly getAllOrdersService: GetAllOrdersService,
+    private readonly payOrderService: PayOrderService,
+    private readonly cancelOrderService: CancelOrderService,
+    private readonly updateInvoiceAddressOrderService: UpdateInvoiceAddressOrderService,
+    private readonly updateShippingAddressOrderService: UpdateShippingAddressOrderService,
+  ) { }
+
+  @UseGuards(AuthGuard)
+  @Get()
+  getAllOrders() {
+    return this.getAllOrdersService.getAllOrders();
+  }
+
+  @Post()
+  createOrder(@Body() data: CreateOrderDto) {
+    return this.createOrderService.createOrder(data);
+  }
+
+  @Put('/:id/pay')
+  payOrder(@Param('id', ParseIntPipe) id: number,) {
+    return this.payOrderService.payOrder(id);
+  }
+
+  @Put('/:id/cancel')
+  cancelOrder(@Param('id', ParseIntPipe) id: number,) {
+    return this.cancelOrderService.cancelOrder(id);
+  }
+
+  @Put('/:id/update-shipping-address')
+  updateOrderShipppingAddress(@Param('id', ParseIntPipe) id: number, @Body() data: UpdateOrderShippingAddressDto) {
+    console.log(data)
+    return this.updateShippingAddressOrderService.updateOrderShippingAddress(data, id);
+  }
+
+  @Put('/:id/update-invoice-address')
+  updateOrderInvoiceAddress(@Param('id', ParseIntPipe) id: number, @Body() data: UpdateOrderInvoiceAddressDto) {
+    return this.updateInvoiceAddressOrderService.updateOrderInvoiceAddress(data, id);
+  }
+}
