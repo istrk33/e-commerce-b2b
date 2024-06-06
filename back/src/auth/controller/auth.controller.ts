@@ -10,9 +10,10 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
-import { AuthService } from '../use-case/auth.service';
+import { AuthService } from '../use-case/auth-signin.service';
 import { AuthDto } from '../dto/create-auth.dto';
-import { AuthGuard } from '@nestjs/passport';
+import { AuthGuard } from '../auth.guard';
+import { UserCreateDto } from 'src/user/dto/user-create.dto';
 @Controller('login')
 export class AuthController {
   constructor(
@@ -22,5 +23,17 @@ export class AuthController {
   @Post()
   createAuth(@Body() data: AuthDto) {
     return this.authService.signIn(data.username, data.password);
+  }
+
+  @Post('register')
+  async register(@Body() user: UserCreateDto) {
+    return this.authService.register(user.password, user.username);
+  }
+
+
+  @UseGuards(AuthGuard)
+  @Post('protected')
+  getProfile(@Request() req) {
+    return req.user;
   }
 }

@@ -17,8 +17,21 @@ export class AuthService {
     pass: string,
   ): Promise<{ access_token: string }> {
     const user = await this.usersService.findOne(username);
-    console.error(user?.password)
-    // console.error(await this.passwordHasher.checkPassword(pass))
+    const isEqualHash = await this.passwordHasher.checkPassword(pass, user?.password)
+    if (!isEqualHash) {
+      throw new UnauthorizedException();
+    }
+    const payload = { sub: user.id, username: user.username };
+    return {
+      access_token: await this.jwtService.signAsync(payload),
+    };
+  }
+
+  async register(
+    username: string,
+    pass: string,
+  ): Promise<{ access_token: string }> {
+    const user = await this.usersService.findOne(username);
     const isEqualHash = await this.passwordHasher.checkPassword(pass, user?.password)
     if (!isEqualHash) {
       throw new UnauthorizedException();

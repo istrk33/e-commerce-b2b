@@ -3,6 +3,8 @@ import { CreateOrderDto } from "../dto/create-order.dto";
 import { UpdateOrderInvoiceAddressDto } from "../dto/update-order-invoice-address.dto";
 import { UpdateOrderShippingAddressDto } from "../dto/update-order-shipping-address.dto";
 import { OrderItem } from "src/order-item/entity/order-item.entity";
+import { Product } from "src/product/entity/product.entity";
+import { CreateOrderItemDto } from "src/order-item/dto/create-order-item.dto";
 
 @Entity()
 export class Order {
@@ -23,7 +25,7 @@ export class Order {
             this.createOrderItems(createOrderData);
             this.createdAt = new Date();
             this.updatedAt = new Date();
-            this.customer = 'tetetete';
+            this.customer = createOrderData.username;
             this.paidAt = null;
             this.status = Order.CartStatus.CART;
             this.total = 10 * createOrderData.items.length;
@@ -46,9 +48,6 @@ export class Order {
     @Column({ nullable: true })
     paidAt: Date;
 
-    // @Column({ type: 'json' })
-    // items: string[];
-
     @Column()
     status: string;
 
@@ -70,7 +69,6 @@ export class Order {
     @Column()
     total: number;
 
-    // @OneToMany(() => OrderItem, (orderItem) => orderItem.order,{ cascade: ['insert', 'update'] })
     @OneToMany(() => OrderItem, (orderItem) => orderItem.order, { cascade: true, })
     items: OrderItem[];
 
@@ -113,22 +111,20 @@ export class Order {
 
     private createOrderItems(createOrderData: CreateOrderDto) {
         this.items = [];
-
-
-        createOrderData.items.map(product => {
-            const existingOrderItem = this.getOrderItemWithProduct(product.product);
+        createOrderData.items.map((orderItem) => {
+            const existingOrderItem = this.getOrderItemWithProductId(orderItem.productId);
             if (existingOrderItem) {
-                existingOrderItem.quantity += 1;
+                existingOrderItem.quantity += orderItem.quantity;
             } else {
-                const newOrderItem = (new OrderItem(product));
+                const newOrderItem = new OrderItem(orderItem);
                 this.items.push(newOrderItem)
             }
         });
     }
 
-    private getOrderItemWithProduct(product: string): OrderItem {
+    private getOrderItemWithProductId(productId: number): OrderItem {
         return this.items.find((item) => {
-            return item.product === product;
+            return item.productId === productId;
         });
     }
 }
