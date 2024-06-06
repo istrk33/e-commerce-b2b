@@ -1,0 +1,482 @@
+[
+  {
+    "title": "Pare-chocs avant",
+    "price": 300,
+    "stock": 3,
+    "description": "Pare-chocs avant d'origine BMW pour une apparence élégante et une protection accrue.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmYhBO1puhFvoaUqQ97RAdGu2JAajJYZwEQ&s",
+    "color": "#00FF00"
+  },
+  {
+    "title": "Phare avant gauche",
+    "price": 200,
+    "stock": 5,
+    "description": "Phare avant gauche authentique BMW pour une visibilité optimale sur la route.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHUgAJ1HVtB0oB4r6JoZxBWPDIdZbK4g-QHA&s",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Phare avant droit",
+    "price": 200,
+    "stock": 4,
+    "description": "Phare avant droit d'origine BMW pour une visibilité nocturne sûre et efficace.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS0HWs5HQagiHwDAjtnRdD_DpBVaDyojHCAw&s",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Rétroviseur extérieur gauche",
+    "price": 150,
+    "stock": 7,
+    "description": "Rétroviseur extérieur gauche BMW pour une vue arrière claire et précise.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRps1mfJm-PM56A21sDE0jvd5nkPsZkjwkXcw&s",
+    "color": "#000000"
+  },
+  {
+    "title": "Rétroviseur extérieur droit",
+    "price": 150,
+    "stock": 6,
+    "description": "Rétroviseur extérieur droit authentique BMW pour une vue panoramique de qualité.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvRw7fylegfN2fw1TRvVSW9R1Dpm6I7uSyDQ&s",
+    "color": "#000000"
+  },
+  {
+    "title": "Capot moteur",
+    "price": 500,
+    "stock": 2,
+    "description": "Capot moteur d'origine BMW pour une protection complète du moteur et du compartiment moteur.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyOuGU_hdvnZBARIT8BIavXyIYZfDXAW-nuw&s",
+    "color": "#0000FF"
+  },
+  {
+    "title": "Porte avant gauche",
+    "price": 400,
+    "stock": 3,
+    "description": "Porte avant gauche d'origine BMW pour un ajustement parfait et une sécurité renforcée.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqIbGXQHGQdKfb3efK8DKgyc9bsJVQ_mhpQ&s",
+    "color": "#000000"
+  },
+  {
+    "title": "Porte avant droite",
+    "price": 400,
+    "stock": 3,
+    "description": "Porte avant droite authentique BMW pour une protection et une esthétique optimales.",
+    "imageUrl": "https://i.ebayimg.com/00/s/OTAwWDEyMDA=/z/2~QAAOSw7vtlslIK/$_1.PNG",
+    "color": "#000000"
+  },
+  {
+    "title": "Porte arrière gauche",
+    "price": 350,
+    "stock": 2,
+    "description": "Porte arrière gauche BMW pour une entrée et une sortie sécurisées du véhicule.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnNFOCimEpnbF-v-lyJgWLmTqj53WMl5f0Nw&s",
+    "color": "#000000"
+  },
+  {
+    "title": "Porte arrière droite",
+    "price": 350,
+    "stock": 2,
+    "description": "Porte arrière droite d'origine BMW pour une intégration parfaite à votre véhicule.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJUso1h9IhyEOWLXOkgOo0sTwPsKvKmVksXg&s",
+    "color": "#000000"
+  },
+  {
+    "title": "Coffre arrière",
+    "price": 600,
+    "stock": 4,
+    "description": "Coffre arrière authentique BMW pour un espace de rangement sûr et spacieux.",
+    "imageUrl": "https://fs.opisto.fr/DesguacesLogrono/nU3vLca6bGKZ.jpg",
+    "color": "#0000FF"
+  },
+  {
+    "title": "Feu arrière gauche",
+    "price": 150,
+    "stock": 5,
+    "description": "Feu arrière gauche d'origine BMW pour une visibilité arrière optimale.",
+    "imageUrl": "https://i.ebayimg.com/images/g/cioAAOSwOFNk20HS/s-l1200.webp",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Feu arrière droit",
+    "price": 150,
+    "stock": 5,
+    "description": "Feu arrière droit authentique BMW pour une sécurité accrue sur la route.",
+    "imageUrl": "https://pieces-autodc.com/130796-medium_default/set-de-feux-arrieres-look-g30-lci-pour-bmw-serie-5-f10-berline-10-17-rouge-dynamique.jpg",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Radiateur",
+    "price": 250,
+    "stock": 6,
+    "description": "Radiateur d'origine BMW pour un refroidissement efficace du moteur.",
+    "imageUrl": "https://i.ebayimg.com/images/g/BHYAAOSwW5Je181b/s-l1200.webp",
+    "color": "#CCCCCC"
+  },
+  {
+    "title": "Calandre",
+    "price": 100,
+    "stock": 8,
+    "description": "Calandre BMW pour une esthétique distinctive et un refroidissement optimal.",
+    "imageUrl": "https://www.adtuning.fr/WebRoot/ce_fr3/Shops/280917/5B05/9BBA/BB20/E5C6/E3CB/C0A8/190E/49EF/CALANDRE-GRILLE-BMW-SERIE-5-F10-F11-520D-525D-530D-535D-M-M5-PACK-NOIR-MAT.jpg",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Jante en alliage",
+    "price": 350,
+    "stock": 10,
+    "description": "Jante en alliage BMW pour un style et une performance inégalés.",
+    "imageUrl": "https://i.ebayimg.com/images/g/0osAAOSwSsNkt95k/s-l1200.webp",
+    "color": "#999999"
+  },
+  {
+    "title": "Roue de secours",
+    "price": 200,
+    "stock": 3,
+    "description": "Roue de secours d'origine BMW pour une tranquillité d'esprit sur la route.",
+    "imageUrl": "https://www.rouesecours24.fr/files/images/product/public/KD5120721258018N-1-1-1604317674.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Spoiler arrière carbon",
+    "price": 200,
+    "stock": 4,
+    "description": "Spoiler arrière authentique BMW pour une apparence sportive et une meilleure aérodynamique.",
+    "imageUrl": "https://m.media-amazon.com/images/I/71UI8LgrS6L._AC_UF1000,1000_QL80_.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Pare-brise",
+    "price": 300,
+    "stock": 5,
+    "description": "Pare-brise BMW pour une visibilité claire et une protection contre les intempéries.",
+    "imageUrl": "https://cdn.autodoc.de/thumb?id=19107928&m=0&n=0&lng=fr&rev=94077834",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Lève-vitre électrique avant gauche",
+    "price": 120,
+    "stock": 7,
+    "description": "Lève-vitre électrique avant gauche BMW pour un fonctionnement sans effort des fenêtres.",
+    "imageUrl": "https://m.media-amazon.com/images/I/61WsfhcT1CL.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Lève-vitre électrique avant droit",
+    "price": 120,
+    "stock": 6,
+    "description": "Lève-vitre électrique avant droit BMW pour un fonctionnement sans effort des fenêtres.",
+    "imageUrl": "https://m.media-amazon.com/images/I/61WsfhcT1CL.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Lève-vitre électrique arrière gauche",
+    "price": 110,
+    "stock": 7,
+    "description": "Lève-vitre électrique arrière gauche BMW pour un fonctionnement sans effort des fenêtres.",
+    "imageUrl": "https://m.media-amazon.com/images/I/61WsfhcT1CL.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Lève-vitre électrique arrière droit",
+    "price": 110,
+    "stock": 6,
+    "description": "Lève-vitre électrique arrière droit BMW pour un fonctionnement sans effort des fenêtres.",
+    "imageUrl": "https://m.media-amazon.com/images/I/61WsfhcT1CL.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Système de freinage complet",
+    "price": 800,
+    "stock": 3,
+    "description": "Système de freinage complet d'origine BMW pour une sécurité maximale de freinage.",
+    "imageUrl": "https://europebm.shop/cdn/shop/products/kit-frein-bmw-m-performance-f20-f21-f22-fxx-398498_1200x1200.jpg?v=1585309479",
+    "color": "#000000"
+  },
+  {
+    "title": "Amortisseur avant gauche",
+    "price": 150,
+    "stock": 8,
+    "description": "Amortisseur avant gauche BMW pour une conduite confortable et stable.",
+    "imageUrl": "https://media.piecesanspermis.fr/89588-large_default/amortisseur-avant-gauche-casalini-sulky-ydea.jpg",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Amortisseur avant droit",
+    "price": 150,
+    "stock": 8,
+    "description": "Amortisseur avant droit BMW pour une conduite confortable et stable.",
+    "imageUrl": "https://media.piecesanspermis.fr/89588-large_default/amortisseur-avant-gauche-casalini-sulky-ydea.jpg",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Amortisseur arrière gauche",
+    "price": 150,
+    "stock": 7,
+    "description": "Amortisseur arrière gauche BMW pour une conduite confortable et stable.",
+    "imageUrl": "https://cdn1.3as-racing.com/417016/385x385/amortisseur-avant-gauche-origine-piaggio-300-350-400-500-mp3-2018-2021.jpg",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Amortisseur arrière droit",
+    "price": 150,
+    "stock": 7,
+    "description": "Amortisseur arrière droit BMW pour une conduite confortable et stable.",
+    "imageUrl": "https://cdn1.3as-racing.com/417016/385x385/amortisseur-avant-gauche-origine-piaggio-300-350-400-500-mp3-2018-2021.jpg",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Kit de distribution",
+    "price": 300,
+    "stock": 5,
+    "description": "Kit de distribution BMW pour un fonctionnement optimal du moteur.",
+    "imageUrl": "https://i.ebayimg.com/thumbs/images/g/ygUAAOSwn-pkR2gZ/s-l225.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Alternateur",
+    "price": 250,
+    "stock": 6,
+    "description": "Alternateur d'origine BMW pour une alimentation électrique fiable.",
+    "imageUrl": "https://media.autodoc.de/360_photos/15781991/h-preview.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Démarreur",
+    "price": 200,
+    "stock": 7,
+    "description": "Démarreur BMW pour un démarrage fiable du moteur.",
+    "imageUrl": "https://scdn.autodoc.de/catalog/categories/600x600/10459.png",
+    "color": "#000000"
+  },
+  {
+    "title": "Pompe à carburant",
+    "price": 180,
+    "stock": 8,
+    "description": "Pompe à carburant BMW pour un approvisionnement en carburant constant.",
+    "imageUrl": "https://m.media-amazon.com/images/I/519LEqK4q2L.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Filtre à air",
+    "price": 30,
+    "stock": 15,
+    "description": "Filtre à air d'origine BMW pour une filtration optimale de l'air entrant.",
+    "imageUrl": "https://www.mtk-tuning.com/media/produits/racing/KN/14450-33-2970.jpg",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Filtre à huile",
+    "price": 20,
+    "stock": 20,
+    "description": "Filtre à huile BMW pour une lubrification propre et efficace du moteur.",
+    "imageUrl": "https://www.accessoires-bmw.fr/43636-large_default/filtre-a-huile-pour-bmw-serie-5-f10-f11-m550d-uniquement.jpg",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Filtre à carburant",
+    "price": 25,
+    "stock": 18,
+    "description": "Filtre à carburant BMW pour une filtration optimale du carburant.",
+    "imageUrl": "https://www.accessoires-bmw.fr/63859-medium_default/filtre-a-carburant-pour-bmw-serie-7-e38-e65-e66-f01-f02.jpg",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Bougies d'allumage",
+    "price": 15,
+    "stock": 25,
+    "description": "Bougies d'allumage BMW pour une combustion propre et efficace.",
+    "imageUrl": "https://media.autodoc.de/360_photos/13631726/h-preview.jpg",
+    "color": "#FFFF00"
+  },
+  {
+    "title": "Bobine d'allumage",
+    "price": 50,
+    "stock": 12,
+    "description": "Bobine d'allumage BMW pour une alimentation électrique fiable aux bougies d'allumage.",
+    "imageUrl": "https://strperformance.com/23871-medium_default/bobines-allumage-renforcees-bmw-serie-5-f10-f11-pack-de-6-bobines-dallumage-renforcees-ignition-projects-pour-bmw-serie-5-f10-f1.jpg",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Silencieux d'échappement",
+    "price": 300,
+    "stock": 6,
+    "description": "Silencieux d'échappement BMW pour une réduction du bruit d'échappement.",
+    "imageUrl": "https://www.driveonly.fr/248849-large_default/silencieux-sport-inox-a-valves-driveonly-bmw-serie-5-f10-f18-520i-525i-528i-535i-20t-30t-2010-2016.jpg",
+    "color": "#CCCCCC"
+  },
+  {
+    "title": "Catalyseur",
+    "price": 400,
+    "stock": 4,
+    "description": "Catalyseur BMW pour une réduction des émissions nocives.",
+    "imageUrl": "https://www.catalyseurs-fap24.fr/media/catalog/product/cache/7a6f88a4ef3533ecdff3007794eefe0c/c/a/cat_kat_31526_eu5_bmw_18327645665_1_ct_ab_14.jpg",
+    "color": "#CCCCCC"
+  },
+  {
+    "title": "Sonde lambda",
+    "price": 80,
+    "stock": 10,
+    "description": "Sonde lambda BMW pour une régulation précise des émissions.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1sZFjbO304IZ5kaaeS0_OdQEc0hf6VJVcw&s",
+    "color": "#00FF00"
+  },
+  {
+    "title": "Radiateur d'habitacle",
+    "price": 150,
+    "stock": 8,
+    "description": "Radiateur d'habitacle BMW pour un confort thermique optimal dans l'habitacle.",
+    "imageUrl": "https://cdn.autodoc.de/thumb?id=20888139&m=0&n=0&lng=fr&rev=94077831",
+    "color": "#FFFFFF"
+  },
+  {
+    "title": "Commodo d'éclairage et de clignotant",
+    "price": 100,
+    "stock": 9,
+    "description": "Commodo d'éclairage et de clignotant BMW pour un contrôle facile des fonctions d'éclairage.",
+    "imageUrl": "https://images.ovoko.com/tr/722x542/ebd/0/0/0/0/0/0/6/2/8/d28342043e045ee6d1ae6b556e4eed17-bmw_5_f10_f11_rankeneliu_komplektas.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Module ABS",
+    "price": 350,
+    "stock": 5,
+    "description": "Module de freinage antiblocage BMW pour une sécurité de freinage accrue.",
+    "imageUrl": "https://diag-engine.fr/2685-home_default/bmw-serie-5-f07-f10-f11-reparation-bloc-abs.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Pompe de direction assistée",
+    "price": 200,
+    "stock": 6,
+    "description": "Pompe de direction assistée BMW pour une assistance de direction optimale.",
+    "imageUrl": "https://media.autodoc.de/360_photos/13633901/h-preview.jpg",
+    "color": "#0000FF"
+  },
+  {
+    "title": "Joint de culasse",
+    "price": 150,
+    "stock": 10,
+    "description": "Joint de culasse BMW pour une étanchéité optimale du moteur.",
+    "imageUrl": "https://cdn.autodoc.de/thumb?id=9952803&m=0&n=0&lng=fr&rev=94077834",
+    "color": "#FF0000"
+  },
+  {
+    "title": "Pompe à eau",
+    "price": 120,
+    "stock": 8,
+    "description": "Pompe à eau d'origine BMW pour un refroidissement efficace du moteur.",
+    "imageUrl": "https://www.accessoires-bmw.fr/38758-large_default/pompe-a-eau-electrique-pour-bmw-serie-5-f10-f11-f07-gt-535i-seulement.jpg",
+    "color": "#0000FF"
+  },
+  {
+    "title": "Kit d'embrayage",
+    "price": 400,
+    "stock": 5,
+    "description": "Kit d'embrayage BMW pour une transmission de puissance fiable.",
+    "imageUrl": "https://www.w-autosport.com/shopping/44426-thickbox_default/kit-embrayage-renforce-bmw-e82-e88-f10-f11-f20-f21-f22-f23-f30-f32-f33-f34-f80-f82-f83-6-vis-dkm.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Cardan avant gauche",
+    "price": 200,
+    "stock": 7,
+    "description": "Cardan avant gauche BMW pour une transmission de puissance fluide.",
+    "imageUrl": "https://i.ebayimg.com/images/g/ENQAAOSwZI1hER~7/s-l1200.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Cardan avant droit",
+    "price": 200,
+    "stock": 7,
+    "description": "Cardan avant droit BMW pour une transmission de puissance fluide.",
+    "imageUrl": "https://cdn.autodoc.de/thumb?id=12955810&m=0&n=0&lng=fr&rev=94077834",
+    "color": "#000000"
+  },
+  {
+    "title": "Cardan arrière gauche",
+    "price": 250,
+    "stock": 6,
+    "description": "Cardan arrière gauche BMW pour une transmission de puissance fluide.",
+    "imageUrl": "https://i.ebayimg.com/images/g/BwIAAOSwgdFkLzKw/s-l1200.webp",
+    "color": "#000000"
+  },
+  {
+    "title": "Cardan arrière droit",
+    "price": 250,
+    "stock": 6,
+    "description": "Cardan arrière droit BMW pour une transmission de puissance fluide.",
+    "imageUrl": "https://i.ebayimg.com/images/g/tL8AAOSw5p9hESzd/s-l1600.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Triangle de suspension avant gauche",
+    "price": 150,
+    "stock": 8,
+    "description": "Triangle de suspension avant gauche BMW pour une conduite stable et sécurisée.",
+    "imageUrl": "https://cdn.autodoc.de/thumb?id=8100778&m=0&n=0&lng=fr&rev=94077834",
+    "color": "#000000"
+  },
+  {
+    "title": "Triangle de suspension avant droit",
+    "price": 150,
+    "stock": 8,
+    "description": "Triangle de suspension avant droit BMW pour une conduite stable et sécurisée.",
+    "imageUrl": "https://www.topwagen.com/260207-large_default/bras-de-suspension-avant-pack-complet-pour-bmw-serie-5-type-f10-berline-ou-type-f11-touring-topran-502674.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Triangle de suspension arrière gauche",
+    "price": 170,
+    "stock": 6,
+    "description": "Triangle de suspension arrière gauche BMW pour une conduite stable et sécurisée.",
+    "imageUrl": "https://www.topwagen.com/260207-large_default/bras-de-suspension-avant-pack-complet-pour-bmw-serie-5-type-f10-berline-ou-type-f11-touring-topran-502674.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Triangle de suspension arrière droit",
+    "price": 170,
+    "stock": 6,
+    "description": "Triangle de suspension arrière droit BMW pour une conduite stable et sécurisée.",
+    "imageUrl": "https://www.topwagen.com/260207-large_default/bras-de-suspension-avant-pack-complet-pour-bmw-serie-5-type-f10-berline-ou-type-f11-touring-topran-502674.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Kit de réparation de pneu",
+    "price": 50,
+    "stock": 10,
+    "description": "Kit de réparation de pneu BMW pour une réparation rapide des crevaisons.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRun3ryldz60am9Im_AVBMldl7KnzF9TdHlNw&s",
+    "color": "#000000"
+  },
+  {
+    "title": "Support moteur avant",
+    "price": 180,
+    "stock": 7,
+    "description": "Support moteur avant BMW pour une absorption efficace des vibrations du moteur.",
+    "imageUrl": "https://i.ebayimg.com/images/g/BDEAAOSw2~JlsNBs/s-l1200.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Support moteur arrière",
+    "price": 180,
+    "stock": 7,
+    "description": "Support moteur arrière BMW pour une absorption efficace des vibrations du moteur.",
+    "imageUrl": "https://i.ebayimg.com/images/g/BDEAAOSw2~JlsNBs/s-l1200.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Courroie de distribution",
+    "price": 80,
+    "stock": 10,
+    "description": "Courroie de distribution BMW pour une synchronisation précise du moteur.",
+    "imageUrl": "https://media.autodoc.de/360_photos/8094814/h-preview.jpg",
+    "color": "#000000"
+  },
+  {
+    "title": "Poulie d'alternateur",
+    "price": 60,
+    "stock": 12,
+    "description": "Poulie d'alternateur BMW pour un fonctionnement efficace du système électrique.",
+    "imageUrl": "https://cdn.autodoc.de/thumb?id=7241338&m=0&n=0&lng=fr&rev=94077832",
+    "color": "#000000"
+  }
+]

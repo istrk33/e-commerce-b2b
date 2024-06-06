@@ -3,9 +3,9 @@ import AuthContext from '../auth/AuthContext';
 import { useJwt } from 'react-jwt';
 import Card from '../components/Product-Card';
 
-const Store = () => {
+const Cart = () => {
     // const { logout } = useContext(AuthContext);
-    // // const { user, logout } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     // const { decodedToken } = useJwt(localStorage.getItem('token') || '');
     // var username = "";
     // if (decodedToken) {
@@ -19,7 +19,7 @@ const Store = () => {
     const [productToDisplay, setProductToDisplay] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:8000/api/products")
+        fetch(`http://localhost:8000/api/orders/cart/${user}`)
             .then((response) => {
                 return response.json();
             })
@@ -70,4 +70,4 @@ const Store = () => {
     );
 };
 
-export default Store;
+export default Cart;

@@ -7,6 +7,7 @@ import { CreateProductService } from './use-case/create-product.service';
 import { DeleteProductService } from './use-case/delete-product.service';
 import { GetOneProductByIdService } from './use-case/get-one-product-by-id.service';
 import { UpdateProductService } from './use-case/update-product.service';
+import { CreateManyProductsService } from './use-case/create-many-product.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Product])],
@@ -17,6 +18,7 @@ import { UpdateProductService } from './use-case/update-product.service';
     DeleteProductService,
     GetOneProductByIdService,
     UpdateProductService,
+    CreateManyProductsService
   ],
 })
 export class ProductModule { }

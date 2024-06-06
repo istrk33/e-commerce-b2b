@@ -15,11 +15,13 @@ import { GetOneProductByIdService } from '../use-case/get-one-product-by-id.serv
 import { UpdateProductService } from '../use-case/update-product.service';
 import { ProductCreateDto } from '../dto/product-create.dto';
 import { ProductUpdateDto } from '../dto/product-update.dto';
+import { CreateManyProductsService } from '../use-case/create-many-product.service';
 
 @Controller('products')
 export class ProductController {
   constructor(
     private readonly createProductService: CreateProductService,
+    private readonly createManyProductsService: CreateManyProductsService,
     private readonly deleteProductService: DeleteProductService,
     private readonly getAllProductsService: GetAllProductsService,
     private readonly getOneProductByIdService: GetOneProductByIdService,
@@ -39,6 +41,11 @@ export class ProductController {
   @Post()
   createProduct(@Body() data: ProductCreateDto) {
     return this.createProductService.createProduct(data);
+  }
+
+  @Post('/many')
+  createManyProducts(@Body() data: ProductCreateDto[]) {
+    return this.createManyProductsService.createManyProducts(data);
   }
 
   @Put(':id')

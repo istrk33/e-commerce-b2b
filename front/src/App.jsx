@@ -5,7 +5,7 @@ import Login from './auth/Login';
 import Register from './auth/Register';
 import Store from './pages/Store.page';
 import NavBar from './components/Nav';
-
+import Cart from './pages/Cart.page';
 
 const PrivateRoute = ({ component: Component }) => {
     return localStorage.getItem('token') ? (
@@ -17,17 +17,18 @@ const PrivateRoute = ({ component: Component }) => {
 
 const App = () => {
     return (
-        <AuthProvider>
-            <Router>
+        <Router>
+            <AuthProvider>
                 <NavBar />
                 <Routes>
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/store" element={<PrivateRoute component={Store} />} />
-                    <Route path="*" element={<Navigate to="/login" />} />
+                    <Route path="/cart" element={<PrivateRoute component={Cart} />} />
+                    <Route path="*" element={<PrivateRoute component={Store} />} />
                 </Routes>
-            </Router>
-        </AuthProvider>
+            </AuthProvider>
+        </Router>
     );
 };
 

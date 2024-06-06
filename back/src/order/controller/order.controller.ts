@@ -19,6 +19,7 @@ import { UpdateShippingAddressOrderService } from '../use-case/update-order-ship
 import { UpdateOrderShippingAddressDto } from '../dto/update-order-shipping-address.dto';
 import { UpdateOrderInvoiceAddressDto } from '../dto/update-order-invoice-address.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
+import { GetUserCartService } from '../use-case/get-user-cart.service';
 
 @Controller('orders')
 export class OrderController {
@@ -29,6 +30,7 @@ export class OrderController {
     private readonly cancelOrderService: CancelOrderService,
     private readonly updateInvoiceAddressOrderService: UpdateInvoiceAddressOrderService,
     private readonly updateShippingAddressOrderService: UpdateShippingAddressOrderService,
+    private readonly getUserCartService: GetUserCartService,
   ) { }
 
   @UseGuards(AuthGuard)
@@ -61,5 +63,10 @@ export class OrderController {
   @Put('/:id/update-invoice-address')
   updateOrderInvoiceAddress(@Param('id', ParseIntPipe) id: number, @Body() data: UpdateOrderInvoiceAddressDto) {
     return this.updateInvoiceAddressOrderService.updateOrderInvoiceAddress(data, id);
+  }
+
+  @Get('cart/:username')
+  getUserCart(@Param('username') username: string) {
+    return this.getUserCartService.getUserCartService(username);
   }
 }
