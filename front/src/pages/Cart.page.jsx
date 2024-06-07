@@ -20,33 +20,33 @@ const Cart = () => {
     useEffect(() => {
         const fetchCart = async () => {
             if (!localStorage.getItem('token') || !decodedToken) return;
-    
+
             setLoading(true);
             setError(null);
-    
+
             const config = {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             };
-    
+
             try {
                 const response = await fetch(`http://localhost:8000/api/orders/cart/${decodedToken.username}`, config);
-    
+
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-    
+
                 const responseProducts = await response.json();
                 setCart(responseProducts);
                 setInvoiceAddress(responseProducts.invoiceAddress);
                 setDeliveryAddress(responseProducts.shippingAddress);
                 setDeliveryMethod(responseProducts.shippingMethod);
-    
+
                 let calculatedTotal = 0;
                 responseProducts.items.forEach((item) => {
                     calculatedTotal += item.quantity * item.product.price;
                 });
                 setTotal(calculatedTotal);
-    
+
             } catch (error) {
                 console.error('Error fetching cart:', error);
                 setError('Erreur lors de la récupération du panier. Veuillez réessayer plus tard.');
@@ -54,10 +54,10 @@ const Cart = () => {
                 setLoading(false);
             }
         };
-    
+
         fetchCart();
     }, [decodedToken]);
-    
+
 
     const handleUpdateAddresses = async () => {
         const config = {
@@ -84,7 +84,8 @@ const Cart = () => {
         const config = {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         };
-        const responsePay = await axios.put(`http://localhost:8000/api/orders/${cart.id}/pay`, config)
+
+        const responsePay = await axios.put(`http://localhost:8000/api/orders/${cart.id}/pay`, null, config)
             .then(alert("Paiement pris en compte !"));
         console.log('Response:', responsePay.data);
     }
@@ -113,13 +114,13 @@ const Cart = () => {
                     label="Moyen de livraison"
                     placeholder="Livraison à domicile"
                     value={deliveryMethod}
-                    onChange={(e) => setDevliveryMethod(e.target.value)}
+                    onChange={(e) => setDeliveryMethod(e.target.value)}
                 />
                 <TextInput
                     label="Adresse de livraison"
                     placeholder="19 rue du Atmis Dokuz 33000 Bordeaux"
                     value={deliveryAddress}
-                    onChange={(e) => setDevliveryAddress(e.target.value)}
+                    onChange={(e) => setDeliveryAddress(e.target.value)}
                 />
                 <button
                     onClick={handleUpdateAddresses}
