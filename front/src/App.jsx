@@ -8,7 +8,7 @@ import NavBar from './components/Nav';
 import Cart from './pages/Cart.page';
 
 const PrivateRoute = ({ component: Component }) => {
-    return localStorage.getItem('token') ? (
+    return localStorage.getItem('token') || typeof component === Register ? (
         <Component />
     ) : (
         <Navigate to="/login" />

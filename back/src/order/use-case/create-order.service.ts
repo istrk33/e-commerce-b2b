@@ -12,6 +12,13 @@ export class CreateOrderService {
     ) { }
 
     async createOrder(createOrderData: CreateOrderDto): Promise<Order> {
+ 
+        // user récupéré
+        // ça récupère en bdd un order lié à cet user et qui est encore en statut cart
+        // s'il existe, ça le modifie
+        // s'il existe pas, ça le créé (new Order)
+        // récupérer le produit lié à l'id envoyé en bdd
+        
         const order = new Order(createOrderData);
         return this.orderRepository.save(order);
     }

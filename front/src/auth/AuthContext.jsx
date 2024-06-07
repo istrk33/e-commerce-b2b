@@ -11,14 +11,14 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const token = localStorage.getItem('token');
-        if (!token && location.pathname !== '/login') {
+        if (!token && location.pathname !== '/login' && location.pathname !== '/register') {
             navigate('/login');
         }
     }, [location.pathname]);
 
     const login = async (username, password) => {
         try {
-            const response = await axios.post('http://localhost:8000/api/login', { username, password });
+            const response = await axios.post('http://localhost:8000/api/auth/login', { username, password });
             localStorage.setItem('token', response.data.access_token);
             setUser({ username });
         } catch (error) {
@@ -26,9 +26,11 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const register = async (username, password) => {
+    const register = async (data) => {
         try {
-            await axios.post('http://localhost:8000/api/register', { username, password });
+            await axios.post('http://localhost:8000/api/users', { ...data }).then(
+                alert("Utilisateur créé !")
+            );
         } catch (error) {
             throw new Error('Error registering user');
         }

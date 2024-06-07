@@ -20,7 +20,10 @@ import { UpdateOrderShippingAddressDto } from '../dto/update-order-shipping-addr
 import { UpdateOrderInvoiceAddressDto } from '../dto/update-order-invoice-address.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { GetUserCartService } from '../use-case/get-user-cart.service';
+import { AddOrderItemToOrderDto } from '../dto/add-order-item-to-order.dto';
+import { AddOrderItemToOrderService } from '../use-case/add-order-item-to-order.service';
 
+@UseGuards(AuthGuard)
 @Controller('orders')
 export class OrderController {
   constructor(
@@ -31,9 +34,9 @@ export class OrderController {
     private readonly updateInvoiceAddressOrderService: UpdateInvoiceAddressOrderService,
     private readonly updateShippingAddressOrderService: UpdateShippingAddressOrderService,
     private readonly getUserCartService: GetUserCartService,
+    private readonly addOrderItemsToOrderService: AddOrderItemToOrderService,
   ) { }
 
-  @UseGuards(AuthGuard)
   @Get()
   getAllOrders() {
     return this.getAllOrdersService.getAllOrders();
@@ -68,5 +71,10 @@ export class OrderController {
   @Get('cart/:username')
   getUserCart(@Param('username') username: string) {
     return this.getUserCartService.getUserCartService(username);
+  }
+
+  @Put('/:username/add-order-item')
+  addOrderItemToItems(@Param('username') username: string, @Body() data: AddOrderItemToOrderDto) {
+    return this.addOrderItemsToOrderService.addOrderItemToOrder(data,username);
   }
 }

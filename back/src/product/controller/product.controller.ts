@@ -7,6 +7,7 @@ import {
   ParseIntPipe,
   Post,
   Put,
+  UseGuards,
 } from '@nestjs/common';
 import { CreateProductService } from '../use-case/create-product.service';
 import { DeleteProductService } from '../use-case/delete-product.service';
@@ -16,7 +17,9 @@ import { UpdateProductService } from '../use-case/update-product.service';
 import { ProductCreateDto } from '../dto/product-create.dto';
 import { ProductUpdateDto } from '../dto/product-update.dto';
 import { CreateManyProductsService } from '../use-case/create-many-product.service';
+import { AuthGuard } from 'src/auth/auth.guard';
 
+@UseGuards(AuthGuard)
 @Controller('products')
 export class ProductController {
   constructor(

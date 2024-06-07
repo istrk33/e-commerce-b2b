@@ -14,13 +14,13 @@ import { AuthService } from '../use-case/auth-signin.service';
 import { AuthDto } from '../dto/create-auth.dto';
 import { AuthGuard } from '../auth.guard';
 import { UserCreateDto } from 'src/user/dto/user-create.dto';
-@Controller('login')
+@Controller('auth')
 export class AuthController {
   constructor(
     private readonly authService: AuthService,
   ) { }
 
-  @Post()
+  @Post('login')
   createAuth(@Body() data: AuthDto) {
     return this.authService.signIn(data.username, data.password);
   }

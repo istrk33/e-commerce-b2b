@@ -5,6 +5,7 @@ import { UpdateOrderShippingAddressDto } from "../dto/update-order-shipping-addr
 import { OrderItem } from "src/order-item/entity/order-item.entity";
 import { Product } from "src/product/entity/product.entity";
 import { CreateOrderItemDto } from "src/order-item/dto/create-order-item.dto";
+import { AddOrderItemToOrderDto } from "../dto/add-order-item-to-order.dto";
 
 @Entity()
 export class Order {
@@ -25,9 +26,11 @@ export class Order {
             this.createOrderItems(createOrderData);
             this.createdAt = new Date();
             this.updatedAt = new Date();
+            // relie ça à un vrai user
             this.customer = createOrderData.username;
             this.paidAt = null;
             this.status = Order.CartStatus.CART;
+            // relie ça au vrai prix du produit envoyé
             this.total = 10 * createOrderData.items.length;
         }
     }
@@ -111,7 +114,15 @@ export class Order {
 
     private createOrderItems(createOrderData: CreateOrderDto) {
         this.items = [];
-        createOrderData.items.map((orderItem) => {
+        this.addOrderItem(createOrderData.items);
+    }
+
+    addOrderItemToItems(addOrderItemToOrderData: AddOrderItemToOrderDto) {
+        this.addOrderItem(addOrderItemToOrderData.items);
+    }
+
+    addOrderItem(items: any) {
+        items.map((orderItem) => {
             const existingOrderItem = this.getOrderItemWithProductId(orderItem.productId);
             if (existingOrderItem) {
                 existingOrderItem.quantity += orderItem.quantity;

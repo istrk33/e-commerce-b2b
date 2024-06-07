@@ -1,13 +1,7 @@
 import { IsArray, IsString } from "class-validator";
 import { OrderItem } from "src/order-item/entity/order-item.entity";
 
-export class CreateOrderDto {
-
-    // productId
-    // qty
-
+export class AddOrderItemToOrderDto {
     @IsArray()
     items: OrderItem[];
-    @IsString()
-    username: string;
 }

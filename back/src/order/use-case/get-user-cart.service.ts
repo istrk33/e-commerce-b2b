@@ -10,11 +10,12 @@ export class GetUserCartService {
     ) { }
 
     async getUserCartService(username: string): Promise<Order | undefined> {
-        return this.orderRepository.createQueryBuilder('order')
+        const val=await this.orderRepository.createQueryBuilder('order')
         .leftJoinAndSelect('order.items', 'items')
         .leftJoinAndSelect('items.product', 'product')
         .where('order.customer = :username', { username })
         .andWhere('order.status = :status', { status: Order.CartStatus.CART })
         .getOne();
+        return val;
     }
 }
